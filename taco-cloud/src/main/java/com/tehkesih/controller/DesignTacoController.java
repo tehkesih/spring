@@ -21,8 +21,8 @@ import com.tehkesih.Order;
 import com.tehkesih.Taco;
 import com.tehkesih.component.Ingredient;
 import com.tehkesih.component.Ingredient.Type;
-import com.tehkesih.dao.jdbc.IngredientRepository;
-import com.tehkesih.dao.jdbc.TacoRepository;
+import com.tehkesih.dao.jpa.IngredientRepository;
+import com.tehkesih.dao.jpa.TacoRepository;
 
 import lombok.extern.slf4j.Slf4j;
 

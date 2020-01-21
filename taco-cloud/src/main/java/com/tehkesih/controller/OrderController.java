@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import com.tehkesih.Order;
-import com.tehkesih.dao.jdbc.OrderRepository;
+import com.tehkesih.dao.jpa.OrderRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
