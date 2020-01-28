@@ -2,8 +2,8 @@ package com.tehkesih.dao.jpa;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.tehkesih.component.Ingredient;
+import com.tehkesih.Ingredient;
 
-public interface IngredientRepository extends CrudRepository<Ingredient, Long>{
+public interface IngredientRepository extends CrudRepository<Ingredient, String>{
 	
 }

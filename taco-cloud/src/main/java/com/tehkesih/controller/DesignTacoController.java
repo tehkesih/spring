@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.tehkesih.Ingredient;
 import com.tehkesih.Order;
 import com.tehkesih.Taco;
-import com.tehkesih.component.Ingredient;
-import com.tehkesih.component.Ingredient.Type;
+import com.tehkesih.Ingredient.Type;
 import com.tehkesih.dao.jpa.IngredientRepository;
 import com.tehkesih.dao.jpa.TacoRepository;
 
@@ -59,7 +59,10 @@ public class DesignTacoController {
 		
 		
 		List<Ingredient> ingredients = new ArrayList<Ingredient>();
-		ingredientRepo.findAll().forEach(i -> ingredients.add(i));
+		ingredientRepo.findAll().forEach(i -> {
+			ingredients.add(i);
+		}
+		);
 		
 		Type[] types = Ingredient.Type.values();
 		for(Type type : types) {
@@ -105,7 +108,7 @@ public class DesignTacoController {
 	private List<Ingredient> filterByType( List<Ingredient> ingredients, Type type){
 		return ingredients
 				.stream()
-				.filter(x -> x.getType().equals(type))
+				.filter(x -> x.getTypes().equals(type))
 				.collect(Collectors.toList());
 	}
 }

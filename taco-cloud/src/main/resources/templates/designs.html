@@ -9,6 +9,10 @@
 		<h1>Design Your Taco</h1>
 		<img th:src="@{/images/taco.jfif}"/>
 		
+		<form method="POST" th:action="@{/logout}" id="logoutForm">
+	      <input type="submit" value="Logout"/>
+	    </form>
+		
 		<form method="POST" th:object="${taco}">
 		
 		
